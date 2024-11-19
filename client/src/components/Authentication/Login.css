@@ -1,0 +1,134 @@
+/* Scoped Login Page Styles */
+
+/* Main wrapper for the login page */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f1f1f1;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Form container styling */
+  .login-page .form-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Logo styling */
+  .login-page .logo {
+    margin-bottom: 1.5rem;
+  }
+  
+  .login-page .logo-image {
+    width: 120px;
+    height: auto;
+  }
+  
+  /* Title styling */
+  .login-page .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #111;
+  }
+  
+  /* Form group styling */
+  .login-page .form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .login-page .form-group label {
+    display: block;
+    font-size: 0.875rem;
+    color: #333;
+    margin-bottom: 0.25rem;
+  }
+  
+  .login-page .form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .login-page .form-group input:focus {
+    border-color: #f90;
+    outline: none;
+  }
+  
+  /* Submit button styling */
+  .login-page .submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #f90;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .login-page .submit-button:hover {
+    background-color: #e68900;
+  }
+  
+  /* Terms text styling */
+  .login-page .terms {
+    font-size: 0.875rem;
+    color: #555;
+    margin-top: 1rem;
+  }
+  
+  .login-page .terms a {
+    color: #0066c0;
+    text-decoration: none;
+  }
+  
+  .login-page .terms a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Login link styling */
+  .login-page .login-link {
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: #333;
+  }
+  
+  .login-page .login-link a {
+    color: #0066c0;
+    text-decoration: none;
+  }
+  
+  .login-page .login-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .login-page .form-container {
+      padding: 1.5rem;
+    }
+  
+    .login-page .title {
+      font-size: 1.25rem;
+    }
+  
+    .login-page .submit-button {
+      padding: 0.6rem;
+      font-size: 0.9rem;
+    }
+  }
+  

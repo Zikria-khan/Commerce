@@ -1,0 +1,85 @@
+/* General Styles for Filters */
+.filters-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between filter groups */
+  padding: 20px;
+  width: 100%; /* Make sure it spans 100% width */
+  max-width: 1300px; /* Increased max-width for larger screens */
+  margin: 20px auto 0; /* Add margin-top of 20px and center the container */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Filter Group */
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Filter Label */
+.filter-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Filter Buttons Container */
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap; /* Allows the buttons to wrap on smaller screens */
+  gap: 10px;
+}
+
+/* Individual Filter Button */
+.filter-button {
+  background-color: #007BFF; /* Blue button background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  outline: none;
+}
+
+.filter-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Active Button Styling */
+.filter-button.active {
+  background-color: #28a745; /* Green background for active filter */
+}
+
+.filter-button:focus {
+  border: 2px solid #0056b3; /* Focus state for better accessibility */
+}
+
+/* Responsive Design for Medium to Large Screens */
+@media (max-width: 1200px) {
+  .filters-container {
+    padding: 25px;
+  }
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .filters-container {
+    padding: 15px; /* Smaller padding for smaller screens */
+  }
+
+  .filter-buttons {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+  }
+
+  .filter-button {
+    width: 100%; /* Make buttons take full width on mobile */
+    text-align: center; /* Center text */
+  }
+}

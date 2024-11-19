@@ -1,0 +1,110 @@
+/* AllReviews.css */
+
+.reviews-container {
+    padding: 20px;
+    background-color: #f4f7fc;
+    font-family: Arial, sans-serif;
+  }
+  
+  .reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .reviews-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-blue {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .btn-blue:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-back {
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+  }
+  
+  .btn-back:hover {
+    background-color: #218838;
+    text-decoration: none;
+  }
+  
+  .reviews-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .reviews-table th,
+  .reviews-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .reviews-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+  
+  .reviews-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .reviews-table .btn-edit,
+  .reviews-table .btn-delete,
+  .reviews-table .btn-view {
+    padding: 8px 15px;
+    font-size: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .reviews-table .btn-view {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .reviews-table .btn-view:hover {
+    background-color: #0056b3;
+  }
+  
+  .reviews-table .btn-edit {
+    background-color: #ffc107;
+    color: white;
+  }
+  
+  .reviews-table .btn-edit:hover {
+    background-color: #e0a800;
+  }
+  
+  .reviews-table .btn-delete {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .reviews-table .btn-delete:hover {
+    background-color: #c82333;
+  }
+  

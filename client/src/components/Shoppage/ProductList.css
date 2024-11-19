@@ -1,0 +1,175 @@
+/* General Container */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  margin: 0 auto;
+}
+
+/* Product Card Styling */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Rounded corners for modern look */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 100%;
+  max-width: 300px; /* Limit max width */
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-10px); /* Lift the card on hover */
+}
+
+/* Product Image Styling */
+.product-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px; /* Smooth corners for the image */
+  object-fit: cover; /* Ensure image covers the space */
+}
+
+/* Product Information Styling */
+.product-info {
+  margin-top: 15px;
+  flex-grow: 1; /* Allow the product info to grow */
+}
+
+.product-info h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+  font-weight: 500;
+}
+
+.product-info p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Button Styling */
+.add-to-cart-button,
+.view-detail-button {
+  padding: 12px;
+  background-color: #4CAF50; /* Green for Add to Cart */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.view-detail-button {
+  background-color: #007BFF; /* Blue for View Details */
+}
+
+.add-to-cart-button:disabled,
+.view-detail-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Button Hover Effect */
+.add-to-cart-button:hover,
+.view-detail-button:hover {
+  background-color: #45a049; /* Slightly darker green for Add to Cart */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.view-detail-button:hover {
+  background-color: #0056b3; /* Darker blue for View Details */
+}
+
+/* Cart Message Styling */
+.cart-message {
+  background-color: #28a745;
+  color: white;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: opacity 0.5s ease-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart-message.error {
+  background-color: #dc3545;
+}
+
+/* Loading/Error Messages */
+.loading-message,
+.error-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .product-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .product-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .product-info p {
+    font-size: 0.9rem;
+  }
+
+  .button-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .add-to-cart-button,
+  .view-detail-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Custom Toast Styles */
+.Toastify__toast--success {
+  background-color: #28a745;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+.Toastify__toast--error {
+  background-color: #dc3545;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+}
