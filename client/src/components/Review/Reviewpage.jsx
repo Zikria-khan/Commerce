@@ -183,3 +183,7 @@ const Reviews = () => {
         </button>
       </form>
     </div>
+  );
+};
+
+export default Reviews;
