@@ -1,49 +1,58 @@
-/* Navbar container */
+/* Main Navbar Container */
 .navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #fff; /* Set the background color of the navbar */
   padding: 10px 20px;
-  background-color: #333;
-  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a light shadow for depth */
 }
 
+/* Inner Container */
 .navbar-inner-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* Logo */
 .navbar-logo {
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
-  color: white;
+  color: #333;
 }
 
+/* Hamburger Menu Icon */
 .navbar-toggle {
-  display: none;
+  display: none; /* Hidden by default on large screens */
+  font-size: 30px;
   cursor: pointer;
 }
 
+/* Navigation Links */
 .navbar-links {
   display: flex;
   gap: 20px;
-  list-style: none;
 }
 
+/* Style the individual navigation links */
 .navbar-links a {
   text-decoration: none;
-  color: white;
+  color: #333;
   font-size: 16px;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
 }
 
-.navbar-icons {
-  display: flex;
-  align-items: center;
+.navbar-links a:hover {
+  background-color: #f4f4f4;
+  border-radius: 5px;
 }
 
+/* Cart Icon */
 .navbar-cart-icon {
   position: relative;
   cursor: pointer;
@@ -51,71 +60,78 @@
 
 .navbar-icon {
   font-size: 24px;
-  color: white;
-}
-
-.cart-count {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  background-color: red;
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 50%;
-  padding: 2px 6px;
-}
-
-/* Mobile menu styles */
-.navbar-links.active {
-  display: block;
-}
-
-.navbar-toggle {
-  display: block;
-  font-size: 24px;
-  color: white;
-}
-
-@media (max-width: 768px) {
-  .navbar-links {
-    display: none;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .navbar-links a {
-    font-size: 18px;
-  }
-}
-/* Container for the cart icon */
-.navbar-cart-icon {
-  position: relative;
-  display: inline-block;
-}
-
-/* Cart Icon Styling */
-.navbar-icon {
-  font-size: 24px; /* Adjust the size of the cart icon */
-  color: #333; /* Icon color */
-  cursor: pointer;
+  color: #333;
 }
 
 /* Cart Count Badge */
 .cart-count {
   position: absolute;
-  top: -5px; /* Adjust position above the cart icon */
-  right: -5px; /* Adjust position to the right of the icon */
-  background-color: #ff5733; /* Badge color */
-  color: white; /* Text color */
-  font-size: 14px; /* Font size of the number */
-  padding: 4px 8px;
-  border-radius: 50%; /* Make the badge circular */
+  top: -5px;
+  right: -5px;
+  background-color: #ff5733;
+  color: white;
+  font-size: 12px;
+  padding: 5px 8px;
+  border-radius: 50%;
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: 20px;
   height: 20px;
-  text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For mobile devices */
+@media screen and (max-width: 768px) {
+  /* Show the hamburger menu icon on small screens */
+  .navbar-toggle {
+    display: block;
+  }
+
+  /* Hide the navigation links on small screens */
+  .navbar-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #fff;
+    padding: 10px 0;
+  }
+
+  /* When the menu is active, show the links */
+  .navbar-links.active {
+    display: flex;
+  }
+
+  /* Style each link in the vertical menu */
+  .navbar-links a {
+    font-size: 18px;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  /* Adjust cart icon for mobile */
+  .navbar-cart-icon {
+    margin-left: 10px;
+  }
+}
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+  .navbar-logo {
+    font-size: 20px;
+  }
+
+  .navbar-links a {
+    font-size: 16px;
+  }
+
+  .navbar-cart-icon {
+    font-size: 20px;
+  }
 }
