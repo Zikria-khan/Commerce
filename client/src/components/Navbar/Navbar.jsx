@@ -6,6 +6,7 @@ import "./Navbar.css"; // Import the CSS file for styles
 function Navbar() {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
+  const [cartCount, setCartCount] = useState(0); // State for cart count
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for toggling the menu
   const token = localStorage.getItem("token");
 
@@ -28,6 +29,23 @@ function Navbar() {
         })
         .catch((error) => {
           console.error("Error:", error);
+        });
+    }
+  }, [token]);
+
+  // Fetch the cart count for the user
+  useEffect(() => {
+    if (token) {
+      const userId = localStorage.getItem('userId') || 'defaultUserId'; // Assuming you store userId in localStorage
+      fetch(`https://commerce-theta-murex-23.vercel.app/api/cart/${userId}`)
+        .then((response) => response.json())
+        .then((data) => {
+          if (Array.isArray(data)) {
+            setCartCount(data.reduce((total, item) => total + item.quantity, 0)); // Calculate total cart items
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching cart:", error);
         });
     }
   }, [token]);
@@ -63,10 +81,13 @@ function Navbar() {
           <Link to="/report">Report</Link>
         </nav>
         <div className="navbar-icons">
-          <div className="navbar-cart-icon" data-count="3" onClick={handleCartClick}>
+          <div className="navbar-cart-icon" onClick={handleCartClick}>
             <FaShoppingCart className="navbar-icon" />
+            {cartCount > 0 && (
+              <span className="cart-count">{cartCount}</span> // Display the cart count as a badge
+            )}
           </div>
-              </div>
+        </div>
       </div>
     </header>
   );
