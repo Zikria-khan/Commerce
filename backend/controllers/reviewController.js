@@ -1,5 +1,5 @@
-const Review = require('../models/reviewSchema');
-const Product = require('../models/productSchema');
+const Review = require('../Models/reviewSchema');
+const Product = require('../Models/productSchema');
 const mongoose = require("mongoose");
 
 // Create a new review
