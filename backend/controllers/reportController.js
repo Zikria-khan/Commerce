@@ -1,4 +1,4 @@
-const Report = require('../models/reportSchema'); // Import the Report model
+const Report = require('../Models/reportSchema'); // Import the Report model
 
 // Create a new report
 const createReport = async (req, res) => {
