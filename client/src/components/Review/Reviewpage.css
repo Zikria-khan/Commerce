@@ -1,0 +1,127 @@
+/* Container Styles */
+.review-container {
+    max-width: 768px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title Styling */
+  .review-container h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Review Card Styling */
+  .review-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .review-profile img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .review-profile p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #6b7280;
+    text-align: center;
+  }
+  
+  /* Review Details */
+  .review-details h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #111827;
+  }
+  
+  .review-details p {
+    font-size: 0.9rem;
+    color: #4b5563;
+  }
+  
+  .review-details .stars i {
+    margin-right: 2px;
+    font-size: 0.9rem;
+    color: #f59e0b;
+  }
+  
+  /* Form Styling */
+  .review-form {
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .review-form h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .review-form label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .review-form input,
+  .review-form textarea,
+  .review-form select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .review-form input:focus,
+  .review-form textarea:focus,
+  .review-form select:focus {
+    border-color: #2563eb;
+  }
+  
+  .review-form button {
+    padding: 0.75rem 1.5rem;
+    background-color: #2563eb;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .review-form button:hover {
+    background-color: #1e3a8a;
+  }
+  
+  /* Spinner */
+  .spinner {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    color: #2563eb;
+  }
+  
