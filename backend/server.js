@@ -20,11 +20,13 @@ const app = express();
 // Enable CORS for specific origin
 app.use(
   cors({
-    origin: 'https://commerce-theta-murex-23.vercel.app', // Allow only this origin
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
-    credentials: true, // Allow credentials if needed
+    origin: ['https://commerce-v89r.vercel.app', 'https://commerce-theta-murex-23.vercel.app'], // Allow multiple origins
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
+    credentials: true, // Allow credentials (if needed)
+    allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
   })
 );
+
 
 // Middleware
 app.use(express.json()); // Parse JSON bodies
