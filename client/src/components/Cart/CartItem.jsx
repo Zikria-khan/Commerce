@@ -17,7 +17,7 @@ const CartItem = ({ image, name, price, cartId, quantity, onDelete }) => {
 
   const handleDelete = async () => {
     try {
-      const response = await fetch(`http://localhost:8000/api/cart/${cartId}`, {
+      const response = await fetch(`https://commerce-theta-murex-23.vercel.app/api/cart/${cartId}`, {
         method: 'DELETE',
       });
 

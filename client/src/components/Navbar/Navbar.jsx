@@ -11,7 +11,7 @@ function Navbar() {
 
   useEffect(() => {
     if (token) {
-      fetch("http://localhost:8000/api/users/profile", {
+      fetch("https://commerce-theta-murex-23.vercel.app/api/users/profile", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

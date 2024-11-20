@@ -16,7 +16,7 @@ const ProductDetail = () => {
           throw new Error('Invalid product ID');
         }
 
-        const response = await fetch(`http://localhost:8000/api/products/${productId}`);
+        const response = await fetch(`https://commerce-theta-murex-23.vercel.app/api/products/${productId}`);
         if (!response.ok) {
           if (response.status === 404) {
             throw new Error('Product not found');
