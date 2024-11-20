@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import "./Register.css";
+import { useNavigate } from "react-router-dom";
+import "./Register.css"; // Import the normal CSS file
 
 function Register() {
   const [username, setUsername] = useState("");
@@ -78,12 +78,12 @@ function Register() {
   };
 
   return (
-    <div className="register-page">
-      <div className="container">
-        <div className="form-container">
+    <div className="registerPage">
+      <div className="containerpage">
+        <div className="formContainer">
           <h2 className="title">Create account</h2>
           <form onSubmit={handleSubmit}>
-            <div className="form-group">
+            <div className="formGroup">
               <label htmlFor="username">Username</label>
               <input
                 type="text"
@@ -93,7 +93,7 @@ function Register() {
                 required
               />
             </div>
-            <div className="form-group">
+            <div className="formGroup">
               <label htmlFor="name">Your name</label>
               <input
                 type="text"
@@ -103,7 +103,7 @@ function Register() {
                 required
               />
             </div>
-            <div className="form-group">
+            <div className="formGroup">
               <label htmlFor="email">Email</label>
               <input
                 type="email"
@@ -113,7 +113,7 @@ function Register() {
                 required
               />
             </div>
-            <div className="form-group">
+            <div className="formGroup">
               <label htmlFor="password">Password</label>
               <input
                 type="password"
@@ -123,7 +123,7 @@ function Register() {
                 required
               />
             </div>
-            <div className="form-group">
+            <div className="formGroup">
               <label htmlFor="password-check">Re-enter password</label>
               <input
                 type="password"
@@ -133,7 +133,7 @@ function Register() {
                 required
               />
             </div>
-            <div className="form-group">
+            <div className="formGroup">
               <label htmlFor="phone">Phone Number</label>
               <input
                 type="text"
@@ -143,7 +143,7 @@ function Register() {
                 required
               />
             </div>
-            <div className="form-group">
+            <div className="formGroup">
               <label htmlFor="address">Address</label>
               <input
                 type="text"
@@ -153,8 +153,8 @@ function Register() {
                 required
               />
             </div>
-            <div className="form-group">
-              <label htmlFor="profilePicture">Upload Profile Picture</label>
+            <div className="formGroup">
+              <label htmlFor="profilePictures">Upload Profile Picture</label>
               <input
                 type="file"
                 id="profilePicture"
@@ -164,8 +164,8 @@ function Register() {
               {uploading && <p>Uploading...</p>}
               {profilePicture && <img src={profilePicture} alt="Profile Preview" style={{ width: "100px" }} />}
             </div>
-            <div className="form-group">
-              <button type="submit" className="submit-button" disabled={uploading}>
+            <div className="formGroup">
+              <button type="submit" className="submitButton" disabled={uploading}>
                 {uploading ? "Uploading..." : "Create your new account"}
               </button>
             </div>
