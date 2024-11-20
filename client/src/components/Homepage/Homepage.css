@@ -16,7 +16,7 @@ body {
 /* Hero Section Styling */
 .hero-section {
   position: relative;
-  height: 88.8vh; /* Set the background image height to 90% of viewport height */
+  height: 89vh; /* Set the background image height to 90% of viewport height */
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Makes the background image fixed */
