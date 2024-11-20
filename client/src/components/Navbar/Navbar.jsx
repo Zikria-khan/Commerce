@@ -82,8 +82,8 @@ function Navbar() {
         </nav>
         <div className="navbar-icons">
           <div className="navbar-cart-icon" onClick={handleCartClick}>
-            <FaShoppingCart className="navbar-icon" />
-            {cartCount > 0 && (
+          <FaShoppingCart className="navbar-icon" />
+          {cartCount > 0 && (
               <span className="cart-count">{cartCount}</span> // Display the cart count as a badge
             )}
           </div>
