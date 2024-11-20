@@ -1,5 +1,5 @@
 import React from 'react';
-import './AboutUs.css'; // Import the custom CSS file
+import './Aboutus.css'; // Import the custom CSS file
 import Navbar from '../Navbar/Navbar';
 
 const AboutUs = () => {

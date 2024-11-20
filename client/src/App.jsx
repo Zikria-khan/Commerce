@@ -35,12 +35,6 @@ const router = createBrowserRouter(
     { path: "/report", element: <FrontendReport /> },
 
     // Admin routes
-    { path: "/admindashboard", element: <AdminDashboard /> },
-    { path: "/allproducts", element: <GetAllProducts /> },
-    { path: "/allreviews", element: <GetAllReviews /> },
-    { path: "/users", element: <GetAllUsers /> },
-    { path: "/orders", element: <OrdersList /> },
-    { path: "/reports", element: <Report /> },
   ],
   {
     future: {
