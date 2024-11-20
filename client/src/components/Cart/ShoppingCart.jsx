@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; 
 import { useNavigate } from 'react-router-dom';
 import CartItem from './CartItem';
 import { toast } from 'react-toastify';
@@ -38,11 +38,13 @@ const ShoppingCart = () => {
     toast.info('Item deleted from cart.');
   };
 
+  // Calculate subtotal
   const subtotal = cartItems.reduce((total, item) => {
     const price = item.productId?.price?.value || 0;
     return total + price * item.quantity;
   }, 0);
 
+  // Calculate total number of items in the cart
   const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   const handleBackToShop = () => {
