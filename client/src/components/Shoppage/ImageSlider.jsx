@@ -4,9 +4,11 @@ import './ImageSlider.css'; // Link your CSS file
 const ImageSlider = () => {
   // Define the list of images
   const images = [
-    "https://via.placeholder.com/1000x500/FF5733/fff?text=Image+1",
-    "https://via.placeholder.com/1000x500/33FF57/fff?text=Image+2",
-    "https://via.placeholder.com/1000x500/3357FF/fff?text=Image+3"
+    "./image1.jpg", // Path relative to the public folder
+    "./image2.jpg",
+    "./image3.jpg"
+    "./image4.jpg"
+    "./image5.jpg"
   ];
 
   // State to track the current image index
