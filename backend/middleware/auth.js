@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const User = require('../models/userSchema');
+const User = require('../Models/userSchema');
 const SECRET_KEY = process.env.JWT_SECRET || 'your_secret_key';
 
 // Middleware to protect routes
