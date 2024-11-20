@@ -54,7 +54,7 @@ const Reviews = () => {
   const fetchReviews = useCallback(async () => {
     try {
       const response = await fetch(
-        `http://localhost:8000/api/reviews/product/${productId}`
+        `https://commerce-theta-murex-23.vercel.app/api/reviews/product/${productId}`
       );
       if (!response.ok) {
         throw new Error("Failed to fetch reviews");
@@ -89,7 +89,7 @@ const Reviews = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:8000/api/reviews", {
+      const response = await fetch("https://commerce-theta-murex-23.vercel.app/api/reviews", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

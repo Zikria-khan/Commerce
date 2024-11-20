@@ -15,7 +15,7 @@ const ShoppingCart = () => {
 
     const fetchCartItems = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/cart/${userId}`);
+        const response = await fetch(`https://commerce-theta-murex-23.vercel.app/api/cart/${userId}`);
         if (!response.ok) {
           throw new Error('Failed to fetch cart items');
         }
@@ -53,7 +53,7 @@ const ShoppingCart = () => {
     try {
       const phoneNumber = '03497174815'; // Replace with actual customer phone number
 
-      const response = await fetch('http://localhost:8000/create-jazzcash-payment', {
+      const response = await fetch('https://commerce-theta-murex-23.vercel.app/create-jazzcash-payment', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

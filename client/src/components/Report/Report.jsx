@@ -39,7 +39,7 @@ function Report() {
     }
 
     try {
-      const response = await fetch('http://localhost:8000/api/reports', {
+      const response = await fetch('https://commerce-theta-murex-23.vercel.app/api/reports', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...report, userId }),
@@ -57,7 +57,7 @@ function Report() {
 
   const fetchReports = async () => {
     try {
-      const response = await fetch(`http://localhost:8000/api/reports/user/${userId}`);
+      const response = await fetch(`https://commerce-theta-murex-23.vercel.app/api/reports/user/${userId}`);
       if (!response.ok) throw new Error('Failed to fetch reports');
 
       const data = await response.json();

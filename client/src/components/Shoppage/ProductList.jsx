@@ -16,7 +16,7 @@ const ProductList = ({ category, sortBy }) => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/products/category/${category}`);
+        const response = await fetch(`https://commerce-theta-murex-23.vercel.app/api/products/category/${category}`);
         if (!response.ok) {
           throw new Error('Failed to fetch products');
         }
@@ -72,7 +72,7 @@ const ProductList = ({ category, sortBy }) => {
 
     try {
       setAddingToCart(true);
-      const response = await fetch('http://localhost:8000/api/cart', {
+      const response = await fetch('https://commerce-theta-murex-23.vercel.app/api/cart', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
