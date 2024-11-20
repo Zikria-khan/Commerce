@@ -1,4 +1,4 @@
-  const Cart = require('../models/cartSchema');
+  const Cart = require('../Models/cartSchema');
 
   // Create a new cart item or update an existing one
   const createCartItem = async (req, res) => {
