@@ -66,17 +66,7 @@ function Navbar() {
           <div className="navbar-cart-icon" data-count="3" onClick={handleCartClick}>
             <FaShoppingCart className="navbar-icon" />
           </div>
-          {user && (
-            <div className="navbar-user-profile" onClick={handleUserClick}>
-              <img
-                src={user.image || "https://placehold.co/40x40"}
-                alt="User Avatar"
-                className="navbar-user-image"
-              />
-              <span className="navbar-user-name">{user.name}</span>
-            </div>
-          )}
-        </div>
+              </div>
       </div>
     </header>
   );
