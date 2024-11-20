@@ -84,8 +84,8 @@ app.use('/api', reportRoutes);
 app.use('/api', reviewRoutes);
 
 // Health check route
-app.get('/api/health', (req, res) => {
-  res.status(200).json({ status: 'ok' });
+app.get('/', (req, res) => {
+  res.status(200).json({ status: 'ok I am flying' });
 });
 
 // Connect to MongoDB
