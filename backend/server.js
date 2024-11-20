@@ -19,12 +19,11 @@ const app = express();
 // Enable CORS for all origins
 // Enable CORS for specific origin
 // Enable CORS for all origins
+// Enable CORS for all origins
 app.use(
   cors({
     origin: '*', // Allow all origins
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowed methods
-    credentials: false, // Disable credentials if not needed
-    allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
   })
 );
 
