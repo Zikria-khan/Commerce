@@ -1,4 +1,4 @@
-const Product = require('../models/productSchema'); // Import the Product model
+const Product = require('../models/productSchema');
 const ReviewModel = require('../models/reviewSchema'); // Import the Review model
 const mongoose = require('mongoose');
 
