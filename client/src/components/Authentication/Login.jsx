@@ -83,14 +83,14 @@ function Login() {
           </div>
           <div className="terms">
             <p>
-              By logging in, you agree to Amazon's{" "}
+              By logging in, you agree to Zakriya khan shopping center{" "}
               <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.
             </p>
           </div>
         </form>
         <div className="login-link">
           <p>
-            New to Amazon? <Link to="/register">Create an account</Link>
+            New to my app? <Link to="/register">Create an account</Link>
           </p>
         </div>
       </div>

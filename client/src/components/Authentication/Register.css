@@ -1,136 +1,79 @@
-/* Register Page Styles */
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
 
-/* Main container for the register page */
-.register-page .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f1f1f1;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
-  /* Form container styling */
-  .register-page .form-container {
-    width: 100%;
-    max-width: 400px;
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  /* Logo styling */
-  .register-page .logo {
-    margin-bottom: 1.5rem;
-  }
-  
-  .register-page .logo-image {
-    width: 120px;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-  }
-  
-  /* Title styling */
-  .register-page .title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    color: #111;
-  }
-  
-  /* Form group styling */
-  .register-page .form-group {
-    margin-bottom: 1rem;
-    text-align: left;
-  }
-  
-  .register-page .form-group label {
-    display: block;
-    font-size: 0.875rem;
-    color: #333;
-    margin-bottom: 0.25rem;
-  }
-  
-  .register-page .form-group input {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  .register-page .form-group input:focus {
-    border-color: #f90;
-    outline: none;
-  }
-  
-  /* Submit button styling */
-  .register-page .submit-button {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
-    color: white;
-    background-color: #f90;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .register-page .submit-button:hover {
-    background-color: #e68900;
-  }
-  
-  /* Terms text styling */
-  .register-page .terms {
-    font-size: 0.875rem;
-    color: #555;
-    margin-top: 1rem;
-  }
-  
-  .register-page .terms a {
-    color: #0066c0;
-    text-decoration: none;
-  }
-  
-  .register-page .terms a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Login link styling */
-  .register-page .login-link {
-    margin-top: 1.5rem;
-    font-size: 0.875rem;
-    color: #333;
-  }
-  
-  .register-page .login-link a {
-    color: #0066c0;
-    text-decoration: none;
-  }
-  
-  .register-page .login-link a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 480px) {
-    .register-page .form-container {
-      padding: 1.5rem;
-    }
-  
-    .register-page .title {
-      font-size: 1.25rem;
-    }
-  
-    .register-page .submit-button {
-      padding: 0.6rem;
-      font-size: 0.9rem;
-    }
-  }
-  
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+img {
+  margin-top: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+}

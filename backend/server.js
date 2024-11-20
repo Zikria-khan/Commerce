@@ -17,7 +17,14 @@ dotenv.config();
 const app = express();
 
 // Enable CORS for all origins
-app.use(cors()); // This will allow requests from any origin
+// Enable CORS for specific origin
+app.use(
+  cors({
+    origin: 'https://commerce-theta-murex-23.vercel.app', // Allow only this origin
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+    credentials: true, // Allow credentials if needed
+  })
+);
 
 // Middleware
 app.use(express.json()); // Parse JSON bodies
