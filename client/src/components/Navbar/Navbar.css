@@ -1,117 +1,90 @@
-/* General Navbar Styles */
+/* Navbar container */
 .navbar-container {
-  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px 20px;
+  background-color: #333;
+  color: white;
 }
 
 .navbar-inner-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .navbar-logo {
-  color: white;
-  font-size: 1.8rem;
-  text-decoration: none;
+  font-size: 24px;
   font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
 }
 
 .navbar-links {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   gap: 20px;
+  list-style: none;
 }
 
 .navbar-links a {
-  color: white;
   text-decoration: none;
-  font-size: 1rem;
-  padding: 8px 16px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  color: white;
+  font-size: 16px;
 }
 
-.navbar-links a:hover {
-  background-color: #555;
-}
-
-/* Icons Section */
 .navbar-icons {
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
 .navbar-cart-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.navbar-icon {
+  font-size: 24px;
   color: white;
-  cursor: pointer;
 }
 
-.navbar-user-profile {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.navbar-user-image {
-  width: 40px;
-  height: 40px;
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
   border-radius: 50%;
-  margin-right: 10px;
+  padding: 2px 6px;
 }
 
-/* Hamburger Menu */
-/* Hamburger Menu */
+/* Mobile menu styles */
+.navbar-links.active {
+  display: block;
+}
+
 .navbar-toggle {
-  display: none;
-  font-size: 2rem;
+  display: block;
+  font-size: 24px;
   color: white;
-  cursor: pointer;
-  position: relative; /* Required to apply z-index */
-  z-index: 10; /* Ensures the toggle is on top */
 }
 
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .navbar-links {
     display: none;
     flex-direction: column;
-    width: 100%;
-    background-color: #333;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    padding: 20px;
-    border-radius: 5px;
-    z-index: 5; /* Ensure the links are below the toggle button */
-  }
-
-  .navbar-links.active {
-    display: flex;
-  }
-
-  .navbar-toggle {
-    display: block;
+    gap: 15px;
   }
 
   .navbar-links a {
-    font-size: 1.2rem;
-    padding: 12px 20px;
-    text-align: center;
-    width: 100%;
-  }
-
-  .navbar-icons {
-    display: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar-logo {
-    font-size: 1.6rem;
+    font-size: 18px;
   }
 }
