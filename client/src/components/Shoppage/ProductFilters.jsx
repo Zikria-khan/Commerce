@@ -50,13 +50,7 @@ function ProductFilters({ setCategory, setSortBy }) {
           >
             Fitness
           </button>
-          <button 
-            className={`filter-button ${activeCategory === 'Accessories' ? 'active' : ''}`}
-            onClick={() => handleCategoryChange('Accessories')}
-          >
-            Accessories
-          </button>
-          <button 
+         <button 
             className={`filter-button ${activeCategory === 'Home & Office' ? 'active' : ''}`}
             onClick={() => handleCategoryChange('Home & Office')}
           >
